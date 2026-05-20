@@ -1,59 +1,32 @@
-# Atv1
+# Backend Spring Boot
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.5.
+Backend com rotas REST para as entidades `Cliente` e `Produto`.
 
-## Development server
+## Rotas disponíveis
 
-To start a local development server, run:
+### Cliente
+- `GET /cliente` - lista todos
+- `POST /cliente` - cria um cliente
+- `PATCH /cliente/{codigo}` - atualiza um cliente
+- `DELETE /cliente/{codigo}` - exclui um cliente
 
-```bash
-ng serve
-```
+### Produto
+- `GET /produto` - lista todos
+- `POST /produto` - cria um produto
+- `PATCH /produto/{codigo}` - atualiza um produto
+- `DELETE /produto/{codigo}` - exclui um produto
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Estrutura implementada
+- `model/cliente/Cliente.java`
+- `model/produto/Produto.java`
+- `repository/ClienteRepository.java`
+- `repository/ProdutoRepository.java`
+- `service/ClienteService.java`
+- `service/ProdutoService.java`
+- `controller/ClienteController.java`
+- `controller/ProdutoController.java`
 
-## Code scaffolding
+## Observações
+- O banco de dados já deve estar configurado em `application.properties`.
+- As rotas possuem CORS liberado para facilitar o uso com Angular.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
